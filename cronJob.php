@@ -8,7 +8,7 @@ foreach($boards as $row)
 	$timeNow=date('h:i a', time());
 	$timePrompt = date('h:i a', strtotime($row['prompt_time']));
 	echo "Time Now".$timeNow."Time prompt_time".$timePrompt;
-	if($timeNow == $timePrompt || true)
+	if($timeNow == $timePrompt )
 	{ 
 		$boardId=$row['id'];
 		$query="select *,u.id as userId from dashboardmanagement_board_users bu inner join dashboardManagement_users u on bu.userId=u.id where boardId='$boardId'";
